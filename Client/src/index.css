@@ -159,3 +159,61 @@ img {
 .section {
     padding: var(--section-padding) 80px;
 }
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Large Tablets */
+
+@media (max-width: 1024px) {
+
+  section,
+  .section {
+    padding: 80px 40px;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+}
+
+/* Tablets */
+
+@media (max-width: 768px) {
+
+  section,
+  .section {
+    padding: 70px 24px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  section,
+  .section {
+    padding: 60px 18px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: .95rem;
+  }
+
+}
