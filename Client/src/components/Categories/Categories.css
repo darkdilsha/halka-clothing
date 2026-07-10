@@ -1,0 +1,21 @@
+.categories {
+    padding: 60px 50px;
+    text-align: center;
+
+
+}
+
+.categories h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    justify-content: center;
+    max-width: 950px;
+    margin:auto;
+}

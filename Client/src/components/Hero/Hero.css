@@ -1,0 +1,57 @@
+.hero {
+   height: 68vh;
+   display: flex;
+   align-items: center;
+    justify-content: center;
+    background:#f8f8f8;
+    padding: 60px 20px;
+
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero h1 {
+  color: #2E2E2E;
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  margin-bottom: 20px;
+  font-weight:600 ;
+  line-height: 1.1;
+  margin :0 0 24px;
+
+}
+
+.hero p {
+  font-family: "Poppins", sans-serif;
+  padding-top: 10px;
+  font-size: 1.35rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+
+
+
+}
+
+.hero button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 18px 44px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    
+}
+
+.hero button:hover {
+  background: #163a2c;
+ 
+}

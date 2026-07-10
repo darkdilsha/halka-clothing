@@ -1,0 +1,161 @@
+/* ------------------------- */
+/* HALKA DESIGN SYSTEM */
+/* ------------------------- */
+
+:root {
+
+  /* ===== Brand Colors ===== */
+
+  --primary: #1F4D3A;
+  --primary-hover: #16382B;
+
+  --text: #2E2E2E;
+  --text-light: #666666;
+
+  --white: #FFFFFF;
+  --background: #F8F8F8;
+
+  --border: #ECECEC;
+
+  /* ===== Shadows ===== */
+
+  --shadow:
+      0 8px 24px rgba(0,0,0,.08);
+
+  --shadow-hover:
+      0 18px 40px rgba(0,0,0,.12);
+
+  /* ===== Border Radius ===== */
+
+  --radius-small: 12px;
+  --radius-medium: 18px;
+  --radius-large: 24px;
+
+  /* ===== Spacing ===== */
+
+  --section-padding: 100px;
+
+  --card-padding: 24px;
+
+  --grid-gap: 32px;
+
+  /* ===== Fonts ===== */
+
+  --heading-font: "Playfair Display", serif;
+
+  --body-font: "Poppins", sans-serif;
+  /* ===== Layout ===== */
+
+--content-width: 1280px;
+
+--section-gap: 60px;
+
+/* ===== Layout ===== */
+
+--content-width: 1280px;
+
+--section-gap: 60px;
+
+/* ===== Animation ===== */
+
+--transition: all 0.3s ease;
+--transition-slow: all 0.5s ease;
+}
+
+/* ------------------------- */
+/* RESET */
+/* ------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background: var(--white);
+    color: var(--text);
+}
+
+/* ------------------------- */
+/* ROOT */
+/* ------------------------- */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ------------------------- */
+/* CONTAINER */
+/* ------------------------- */
+
+.container {
+  width: min(var(--content-width), 92%);
+  margin: 0 auto;
+}
+
+/* ------------------------- */
+/* TYPOGRAPHY */
+/* ------------------------- */
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--text);
+  font-weight: 600;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+
+p {
+  font-family: var(--body-font);
+  color: var(--text-light);
+  line-height: 1.7;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+
+    font-family: var(--body-font);
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------- */
+/* SECTIONS */
+/* ------------------------- */
+
+.section {
+    padding: var(--section-padding) 80px;
+}
