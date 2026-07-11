@@ -1,33 +1,51 @@
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 
-import { FiSearch, FiHeart, FiShoppingBag } from "react-icons/fi";
+import {
+  FiSearch,
+  FiHeart,
+  FiShoppingBag,
+  FiUser,
+} from "react-icons/fi";
 
 function Navbar() {
   return (
     <nav>
 
-      <img src={logo} alt="Halka Clothing" className="logo" />
+      {/* Logo */}
+
+      <img
+        src={logo}
+        alt="Halka Clothing"
+        className="logo"
+      />
+
+      {/* Search */}
+
+      <div className="search-box">
+        <FiSearch />
+
+        <input
+          type="text"
+          placeholder="Search products..."
+        />
+      </div>
+
+      {/* Navigation */}
 
       <ul>
-        <li>Home</li>
         <li>Collections</li>
-        <li>New In</li>
+        <li>New Arrivals</li>
         <li>About</li>
-        <li>Contact</li>
       </ul>
+
+      {/* Icons */}
 
       <div className="nav-right">
 
-        <div className="search-box">
-          <FiSearch />
-          <input
-            type="text"
-            placeholder="Search products..."
-          />
-        </div>
+        <FiUser className="icon" />
 
-        
+        <FiHeart className="icon" />
 
         <FiShoppingBag className="icon" />
 
