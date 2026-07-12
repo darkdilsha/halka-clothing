@@ -14,6 +14,7 @@ nav {
     padding: 20px 60px;
 
     background: rgba(255,255,255,.92);
+    box-shadow:0 4px 20px rgba(0,0,0,.04);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -28,7 +29,7 @@ nav {
 /* ========================= */
 
 .logo {
-    height: 72px;
+    height: 56px;
     width: auto;
     object-fit: contain;
     cursor: pointer;
@@ -144,7 +145,7 @@ nav li:hover::after {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 52px;
 }
 
 /* Search */
@@ -194,15 +195,21 @@ nav li:hover::after {
 /* Icons */
 
 .icon {
-    font-size: 1.5rem;
-    color: var(--text);
+     width:40x;
+    height:40px;
+    font-size: 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: all .3s ease;
     
 
-    border-radius:50%;
 }
 
 .icon:hover {
