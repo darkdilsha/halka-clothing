@@ -1,18 +1,23 @@
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 
+import { useState } from "react";
+
 import {
   FiSearch,
-  FiHeart,
   FiShoppingBag,
   FiUser,
+  FiMenu,
+  FiX,
 } from "react-icons/fi";
 
 function Navbar() {
-  return (
-    <nav>
 
-      {/* Logo */}
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+
+    <nav>
 
       <img
         src={logo}
@@ -20,38 +25,44 @@ function Navbar() {
         className="logo"
       />
 
-      {/* Search */}
-
       <div className="search-box">
+
         <FiSearch />
 
         <input
           type="text"
           placeholder="Search products..."
         />
+
       </div>
 
-      {/* Navigation */}
+      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-      <ul>
         <li>Collections</li>
-        <li>New Arrivals</li>
-        <li>About</li>
-      </ul>
 
-      {/* Icons */}
+        <li>New Arrivals</li>
+
+        <li>Contact</li>
+
+      </ul>
 
       <div className="nav-right">
 
         <FiUser className="icon" />
 
-        <FiHeart className="icon" />
-
         <FiShoppingBag className="icon" />
+
+        <div
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </div>
 
       </div>
 
     </nav>
+
   );
 }
 
