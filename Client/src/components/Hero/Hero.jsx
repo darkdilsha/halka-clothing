@@ -2,18 +2,29 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero"  >
-        <div className="hero-content">
-            <h1>Elegance for Every Occasion</h1>
+    <section className="hero">
 
-            <p>
-                Discover beautiful ladies' fashion with comfort, quality, and timeless style.
-            </p>
+      <div className="hero-content">
 
-            <button>Shop Now    </button>
+        <span className="hero-tag">
+          NEW COLLECTION
+        </span>
 
-        </div>
+        <h1>
+          Elegance for <br />
+          Every Occasion
+        </h1>
 
+        <p>
+          Discover timeless fashion designed to make every woman
+          feel confident, graceful, and effortlessly beautiful.
+        </p>
+
+        <button>
+          Shop Collection
+        </button>
+
+      </div>
 
     </section>
   );

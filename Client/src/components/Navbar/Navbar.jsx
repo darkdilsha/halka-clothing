@@ -4,65 +4,98 @@ import logo from "../../assets/images/logo.png";
 import { useState } from "react";
 
 import {
-  FiSearch,
-  FiShoppingBag,
-  FiUser,
   FiMenu,
   FiX,
+  FiSearch,
+  FiUser,
+  FiHeart,
+  FiShoppingBag,
 } from "react-icons/fi";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <nav className="navbar">
 
-    <nav>
+      {/* ---------- TOP ROW ---------- */}
 
-      <img
-        src={logo}
-        alt="Halka Clothing"
-        className="logo"
-      />
+      <div className="navbar-top">
 
-      <div className="search-box">
-
-        <FiSearch />
-
-        <input
-          type="text"
-          placeholder="Search products..."
+        <img
+          src={logo}
+          alt="Halka Clothing"
+          className="logo"
         />
 
-      </div>
+        {/* Desktop Search */}
 
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+        <div className="search-box desktop-search">
+          <FiSearch />
+          <input
+            type="text"
+            placeholder="Search products..."
+          />
+        </div>
 
-        <li>Collections</li>
+        {/* Desktop Links */}
 
-        <li>New Arrivals</li>
+        <ul className="nav-links">
+          <li>Collections</li>
+          <li>New Arrivals</li>
+          <li>Contact</li>
+        </ul>
 
-        <li>Contact</li>
+        {/* Desktop Icons */}
 
-      </ul>
+        <div className="nav-icons">
+          <FiUser className="icon" />
+          <FiHeart className="icon" />
+          <FiShoppingBag className="icon" />
+        </div>
 
-      <div className="nav-right">
+        {/* Mobile Menu Button */}
 
-        <FiUser className="icon" />
-
-        <FiShoppingBag className="icon" />
-
-        <div
+        <button
           className="menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FiX /> : <FiMenu />}
-        </div>
+        </button>
+
+      </div>
+
+      {/* ---------- MOBILE SEARCH ---------- */}
+
+      <div className="search-box mobile-search">
+        <FiSearch />
+        <input
+          type="text"
+          placeholder="Search products..."
+        />
+      </div>
+
+      {/* ---------- MOBILE MENU ---------- */}
+
+      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+
+        <a href="#">Collections</a>
+
+        <a href="#">New Arrivals</a>
+
+        <a href="#">Contact</a>
+
+        <hr />
+
+        <a href="#">My Account</a>
+
+        <a href="#">Wishlist</a>
+
+        <a href="#">Cart</a>
 
       </div>
 
     </nav>
-
   );
 }
 
